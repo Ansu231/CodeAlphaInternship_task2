@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding:0;
+    font-family: sans-serif;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(I/images.jpeg);
+    background-size: cover;
+    background-position: center; 
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 120px;
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009685;
+    position: absolute;
+    left: 0;
+    bottom:-10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+.content h1{
+    font-size: 70px;
+    margin-top: 80px;
+}
+.content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+.page-blocks{
+    text-align: center;
+    margin-top: 50px;
+}
+.title{
+    font-variant: small-caps;
+    font-size:30px;
+    margin: 20px;
+    letter-spacing: 10px;
+    color: #0f4c75;
+}
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('I/contact.jpg') no-repeat center center/cover;
+
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input, 
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+} 
+
+#contact-box form{
+    width: 40%;
+}
+
+#contact-box label{
+   font-size: 1.3rem;
+   font-family: 'Bree Serif', serif;
+}
+.h-primary{
+    font-size: 2.3rem;
+    text-align: center;
+    padding: 12px;
+}
+.btn{
+    padding: 10px 15px;
+    margin: 10px;
+    background:grey;
+    border: 0;
+    outline: none;
+    cursor:pointer;
+    font-size: 22px;
+    font-weight: 50;
+    border-radius: 30px;
+    color:#fff;
+}
+.g-recaptcha{
+    margin: 50px 40px; 
+}
+.status{
+    font-size: 15px;
+    color: green;
+    padding: 20px;
+}
+/*properties of box*/
+.section{
+    display: flex;
+    margin: 50px;
+}
+
+.box{
+    border: 2px solid white;
+    box-shadow: 2px 2px 5px 5px #eee ;
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 28px;
+    background: white;
+    margin-bottom: 2px;
+    transition: 0.5s;
+}
+
+.box .content{
+    position: relative;
+    max-width: 800px;
+    color: black;
+}
+
+.box .content img{ 
+    height: 160px;
+    display: block;
+}
+.box .content a,
+.popup a{
+    position: relative;
+    padding: 5px 20px;
+    display: inline-block;
+    background: brown;
+    margin-top: 20px;
+    text-decoration: none;
+    color: white;
+}
+.popup{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 600px; 
+    overflow: hidden; 
+    padding: 50px;
+    background:white;
+    border-radius: 10px;
+    text-align: justify;
+    box-shadow: 0px 2px 5px 5px rgba(0,0,0,0.1); 
+    background: white;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+.popup.active{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    top: 50%; 
+}
